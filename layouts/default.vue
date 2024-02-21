@@ -31,6 +31,11 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 767px) {
+        padding: 10px 20px;
+        justify-content: center;
+    }
+
     .searchCity {
         display: flex;
         align-items: flex-end;
@@ -64,6 +69,10 @@ header {
     span {
         color: #fff;
         font-size: 22px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
 
 }

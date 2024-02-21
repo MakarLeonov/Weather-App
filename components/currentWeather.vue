@@ -29,17 +29,25 @@
 
 <style lang="scss">
     .current-weather {
-        max-width: 80vw;
+        max-width: 700px;
         margin: 0 auto;
 
         border: 2px solid #282828;
         border-radius: 20px;
-        padding: 30px 20px 10px;
         padding: 30px 20px;
+
+        @media (max-width: 767px) {
+            max-width: 80vw;
+            padding: 10px 20px 30px;            
+        }
 
         &__head {
             display: flex;
             align-items: center;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
 
             &-icon {
                 width: 130px;
@@ -61,6 +69,16 @@
                     font-weight: 500;
                     color: #282828;
                 }
+
+                @media (max-width: 767px) {
+                    &-temp {
+                        font-size: 25px;
+                    }
+                    
+                    &-feels-like {
+                        font-size: 17px;
+                    }
+                }
             }
         }
 
@@ -70,6 +88,12 @@
             p {
                 font-size: 18px;
                 padding: 0 0 5px;
+
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                    padding: 0 0 3px;
+                    text-align: center;
+                }
             }
         }
     }

@@ -30,13 +30,17 @@
 
 <style lang="scss">
     .forecast {
-        max-width: 80vw;
+        max-width: 700px;
         margin: 0 auto;
 
         border: 2px solid #282828;
         border-radius: 20px;
-        padding: 30px 20px 10px;
         padding: 30px 20px;
+
+        @media (max-width: 767px) {
+            max-width: 80vw;
+            padding: 10px 20px 30px;            
+        }
         
         &__title {
             font-size: 20px;
@@ -52,6 +56,20 @@
             padding: 10px;
             margin: 0 0 20px;
             transition: background .25s ease-in-out;
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                
+                &__left,
+                &__right {
+                    text-align: center;
+                    flex-direction: column;
+                }
+
+                &__left {
+                    margin: 0 0 10px;
+                }
+            }
 
             &:hover {
                 background: rgb(238, 238, 238);
